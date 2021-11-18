@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AdvancedAADB2C.Xamarin.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout VerticalOptions="Center" x:Name="RegistrationForm" IsVisible="False">
+            <Label Text="Sign up today for this awesome app!" FontAttributes="Bold" FontSize="Title" Margin="0,0,0,16" TextColor="#003E6F" />
+            <Entry Placeholder="Name" x:Name="EntryName" />
+            <Entry Placeholder="Email" x:Name="EntryEmail" Keyboard="Email" />
+            <Button Text="Sign up" Clicked="ButtonSignup_Clicked" />
+        </StackLayout>
+        <StackLayout x:Name="ProgressIndicator" VerticalOptions="Center" Grid.RowSpan="2">
+            <ActivityIndicator IsRunning="True" IsVisible="True" />
+            <Label x:Name="ProgressLabel" HorizontalOptions="Center" Margin="12" />
+        </StackLayout>
+        <StackLayout VerticalOptions="Center" x:Name="RegistrationResult" IsVisible="False">
+            <Label Text="Please confirm your email" FontAttributes="Bold" FontSize="Title" Margin="0,0,0,16" TextColor="#003E6F" />
+            <Label Margin="0,0,0,16">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="We have send a confirmation email to your address " />
+                        <Span x:Name="EmailLabel" />
+                        <Span Text=" . Please click the link in the email to verify your address and finish your sign up process." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button Text="Sign in" Clicked="ButtonSignin_Clicked" />
+        </StackLayout>
+        <StackLayout Grid.Row="1" VerticalOptions="End" x:Name="LoginForm" IsVisible="False">
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="You already have an account? " />
+                        <Span Text="Sign in" TextColor="#003E6F">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ButtonSignin_Clicked" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </Grid>
+</ContentPage>

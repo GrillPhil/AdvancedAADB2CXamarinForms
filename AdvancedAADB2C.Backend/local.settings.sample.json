@@ -1,0 +1,19 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "HostName": "{Your Tenant Name}.b2clogin.com",
+    "TenantName": "{Your Tenant Name}.onmicrosoft.com",
+    "ClientId": "{Your Client Id}",
+    "RedirectUri": "https%3A%2F%2Fjwt.ms",
+    "ExpectedRedirect": "https://jwt.ms/#id_token=",
+    "GenLinkTemplate": "https://{0}/{1}/B2C_1A_INV_genlink/oauth2/v2.0/authorize?client_id={2}&nonce={3}&redirect_uri={4}&scope=openid&response_type=id_token&disable_cache=true&login_hint={5}&displayName={6}",
+    "FinalUrl": "http://localhost:3000",
+    "RedeemTemplate": "https://{0}/{1}/B2C_1A_INV_redeem/oauth2/v2.0/authorize?client_id={2}&nonce={3}&redirect_uri={4}&scope=openid&response_type=id_token&disable_cache=true&id_token_hint={5}",
+    "SmtpUsername": "{Your SMTP Username}",
+    "SmtpPassword": "{Your SMTP Password}",
+    "SmtpHost": "{Your SMTP Host}",
+    "SmtpPort": "{Your SMTP Port}"
+  }
+}

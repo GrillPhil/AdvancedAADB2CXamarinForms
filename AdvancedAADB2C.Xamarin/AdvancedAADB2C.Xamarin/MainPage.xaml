@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AdvancedAADB2C.Xamarin.MainPage"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Margin="16">
+        <Label Text="UserId (oid)" />
+        <Label x:Name="labelId" FontAttributes="Bold" Margin="0,0,0,12" />
+        <Label Text="Name" />
+        <Label x:Name="labelName" FontAttributes="Bold" Margin="0,0,0,12" />
+        <Label Text="Email" />
+        <Label x:Name="labelEmail" FontAttributes="Bold" Margin="0,0,0,12" />
+        <Button x:Name="logoutButton" Text="Logout" Clicked="OnLogoutButtonClicked" />
+    </StackLayout>
+</ContentPage>

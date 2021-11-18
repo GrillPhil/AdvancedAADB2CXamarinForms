@@ -1,0 +1,17 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Landing Page after successful registration in AAD B2C",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jwt-decode": "^3.1.2"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

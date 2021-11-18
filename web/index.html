@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Registration complete</title>
+    <script type="text/javascript" src="node_modules/jwt-decode/build/jwt-decode.js"></script>
+</head>
+
+<body>
+    <h1>Welcome, <span id="name"></span>! Your registration is complete. You can now sign in the awesome app.</h1>
+    <script>
+
+        const parts = window.location.hash.split('id_token=');
+        var decoded = jwt_decode(parts[1]);
+        console.log(decoded);
+
+        document.getElementById("name").innerText = decoded.name;
+
+    </script>
+</body>
+</html>

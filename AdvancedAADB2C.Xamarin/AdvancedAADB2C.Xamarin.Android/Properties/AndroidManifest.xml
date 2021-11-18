@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.advancedaadb2c.xamarin">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
+    <application android:label="AdvancedAADB2C.Xamarin.Android" 
+				 android:theme="@style/MainTheme" 
+				 android:networkSecurityConfig="@xml/network_security_config">
+		<activity android:name="microsoft.identity.client.BrowserTabActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="msald00a9425-86c4-4937-b55a-cd1abfbf1eac" android:host="auth" />
+			</intent-filter>
+		</activity>"
+	</application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>
